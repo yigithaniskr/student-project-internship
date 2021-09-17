@@ -1,6 +1,5 @@
 package com.project.havelsan.repository;
 
-
 import com.project.havelsan.model.City;
 import com.project.havelsan.model.Student;
 import com.project.havelsan.model.Town;

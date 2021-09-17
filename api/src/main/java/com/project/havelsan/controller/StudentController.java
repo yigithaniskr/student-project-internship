@@ -1,14 +1,11 @@
 package com.project.havelsan.controller;
 
-import com.project.havelsan.model.City;
 import com.project.havelsan.model.Student;
 import com.project.havelsan.service.StudentService;
-import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
-
 @RestController
 @RequestMapping("/api")
 @CrossOrigin
@@ -55,7 +52,7 @@ public class StudentController {
     public ResponseEntity<Student> update(@RequestBody Student student){
         return ResponseEntity.ok(studentService.add(student));
     }
-    @DeleteMapping("/id/{studentId}")
+    @DeleteMapping("/delete/{studentId}")
     public void delete(@PathVariable Long studentId){
         studentService.delete(studentId);
     }

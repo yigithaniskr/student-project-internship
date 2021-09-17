@@ -1,10 +1,5 @@
 package com.project.havelsan.model;
-
-import lombok.Data;
-import lombok.NoArgsConstructor;
-
 import javax.persistence.*;
-
 
 @Entity
 @Table(name = "city")

@@ -1,5 +1,4 @@
 package com.project.havelsan.service;
-
 import com.project.havelsan.model.City;
 import com.project.havelsan.model.Student;
 import com.project.havelsan.model.Town;
@@ -7,7 +6,6 @@ import com.project.havelsan.repository.CityRepository;
 import com.project.havelsan.repository.StudentRepository;
 import com.project.havelsan.repository.TownRepository;
 import org.springframework.stereotype.Service;
-
 import java.util.List;
 import java.util.Optional;
 
@@ -40,7 +38,6 @@ public class StudentService {
     public List<Student> getStudentByCityId(short cityId){
         Optional<City> city = cityRepository.findById(cityId);
         List<Student> students = studentRepository.findByCity(city.get());
-
         return students;
     }
     public List<Student> getStudentByTownId(short townId){
@@ -55,5 +52,4 @@ public class StudentService {
     public void delete(Long studentId){
         studentRepository.deleteById(studentId);
     }
-
 }
